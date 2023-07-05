@@ -1,0 +1,18 @@
+// Set the base font size
+$base-font-size: 16px;
+
+// Define a function to convert pixels to rems
+@function px-to-rem($px) {
+  @return ($px / $base-font-size) * 1rem;
+}
+
+// Set the root font size to be the base font size converted to rems
+html {
+  font-size: px-to-rem($base-font-size);
+}
+
+// Use the px-to-rem function to set font sizes and other dimensions in rems
+// .example {
+//   font-size: px-to-rem(24px);
+//   padding: px-to-rem(16px);
+// }
